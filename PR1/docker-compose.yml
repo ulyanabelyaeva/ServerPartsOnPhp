@@ -1,0 +1,21 @@
+version : '3'
+
+services:
+  db:
+    image: mysql:8.0.30
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - db_volume:/var/lib/mysql
+  php:
+    volumes:
+      - ./pages:/var/www/html
+    build: .
+    ports:
+      - "8080:80"
+    links: 
+      - db
+
+volumes:
+  db_volume:
