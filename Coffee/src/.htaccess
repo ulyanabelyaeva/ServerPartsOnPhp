@@ -1,0 +1,2 @@
+
+ErrorDocument 401 public/account-login.php

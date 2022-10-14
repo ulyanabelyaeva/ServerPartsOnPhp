@@ -4,9 +4,7 @@
     <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-    <a href="http://localhost:8081/users.php">Посмотреть список всех пользователей</a>
-    <br>
-    <a href="http://localhost:8082/login.html">Войти</a>
+    <a href="http://localhost:8081/admin/users.php">Посмотреть список всех пользователей</a>
     <div class="title">Кофейня</div>
     <div class="cards2">
         <?php
