@@ -10,15 +10,17 @@
 <body>
     <div class="wrapper">
         <div class="title">Список пользователей</div>
-        <table>
+        <ul>
         <?php
             $mysqli = new mysqli("db", "user", "password", "appDB");
             $result = $mysqli->query("SELECT * FROM users");
             foreach ($result as $row){
-                echo "<tr><td>{$row['phone']}</td><td>{$row['pass']}</td></tr>";
+                echo "<li>{$row['username']} {$row['phone']}</li>";
             }
         ?>
-        </table>
+        </ul>
     </div>
+
+    <a href="http://localhost:8081/user/logout"><button>Выйти</button></a>
 </body>
 </html>

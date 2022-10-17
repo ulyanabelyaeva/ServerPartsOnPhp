@@ -5,6 +5,20 @@ FLUSH PRIVILEGES;
 
 USE appDB;
 
+CREATE TABLE IF NOT EXISTS users (
+  ID INT(11) NOT NULL AUTO_INCREMENT,
+  username VARCHAR(20) NOT NULL,
+  phone VARCHAR(11) NOT NULL,
+  pass VARCHAR(150) NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+INSERT INTO users (username, phone, pass) values ('Alex', '89180000000', '$2y$10$gCouuDzhd2/htwyDWMvyFOtS3rA9yq9eE1swqjqbMf9ohLGpn.ZmK');
+INSERT INTO users (username, phone,  pass) values ('Bob', '89181111111', '$2y$10$SUIW.3Bh6G1nuAOwfms03.gHBGKj3DF06./sfgpxLH4ujR2xD4Y4C');
+INSERT INTO users (username, phone, pass) values ('Kate', '89182222222', '$2y$10$LIFypMqdGcvyBnGm6mQlaOvZ/ayptHaTTENd4rxiHgrDEfgQjlZoO');
+INSERT INTO users (username, phone, pass) values ('Lilo', '89183333333', '$2y$10$N6PZNI3vnpAqWls/x6bIwuywTEuS.RxdJ8FMfnpur4pOK7UtWXUPa');
+
+
 CREATE TABLE IF NOT EXISTS products (
   ID INT(11) NOT NULL AUTO_INCREMENT,
   name VARCHAR(20) NOT NULL,

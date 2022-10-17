@@ -1,5 +1,5 @@
-FROM php:8.0-apache
+FROM php:7.2-apache
 RUN apt-get update
-RUN apt-get -y install libaprutil1-dbd-mysql
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli && a2enmod authn_dbd
+RUN apt-get -y install apache2-utils libaprutil1-dbd-mysql && a2enmod authn_dbd
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 EXPOSE 80

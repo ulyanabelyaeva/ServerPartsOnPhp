@@ -1,14 +1,6 @@
 .cards2{
     display: flex;
 }
-.card2{
-    margin-right: 20px;
-}
-
-.title{
-    font-size: 25px;
-}
-
 
 /* внешние границы таблицы серого цвета толщиной 1px */
 table {

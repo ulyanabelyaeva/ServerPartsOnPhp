@@ -5,6 +5,7 @@
 </head>
 <body>
     <a href="http://localhost:8081/admin/users.php">Посмотреть список всех пользователей</a>
+    <div>! Пароль такой же как логин</div>
     <div class="title">Кофейня</div>
     <div class="cards2">
         <?php
@@ -16,7 +17,7 @@
                     $cost = $row['cost'];
                     $capacity = $row['capacity'];
                     echo "<div class='card2'>
-                                <img src='image/{$image}'>
+                                <img src='user/image/{$image}'>
                                 <div class='cost'>{$cost} р</div>
                                 <div class='capacity'>{$capacity} мл</div>
                             </div>";
