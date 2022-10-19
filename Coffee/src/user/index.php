@@ -1,7 +1,7 @@
 <html lang="ru">
 <head>
     <title>Coffee</title>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="/user/style.css" type="text/css"/>
 </head>
 <body>
     <a href="http://localhost:8081/admin/users.php">Посмотреть список всех пользователей</a>

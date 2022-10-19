@@ -10,10 +10,6 @@ services:
     volumes:
       - ./db:/docker-entrypoint-initdb.d
       - db_volume:/var/lib/mysql
-    # healthcheck:
-    #   test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
-    #   timeout: 1s
-    #   retries: 10
   php:
     volumes:
       - ./src:/var/www/html
@@ -23,9 +19,6 @@ services:
       - "8081:80"
     links:
       - db
-    # depends_on:
-    #   db:
-    #     condition: service_healthy
   nginx:
     image: nginx:1.23.1
     volumes:
