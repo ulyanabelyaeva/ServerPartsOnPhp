@@ -6,7 +6,6 @@ services:
     hostname: db
     environment: 
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_ROOT_USERNAME=user
     volumes:
       - ./db:/docker-entrypoint-initdb.d
       - db_volume:/var/lib/mysql
