@@ -1,2 +1,1 @@
-
-ErrorDocument 401 public/account-login.php
+ErrorDocument 401 /user/login.php

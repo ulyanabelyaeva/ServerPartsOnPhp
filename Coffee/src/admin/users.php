@@ -28,6 +28,6 @@ include __DIR__ . "/scripts/delete_script.php";
         </ul>
     </div>
 
-    <a href="http://localhost:8081/user/logout"><button>Выйти</button></a>
+    <form action="/logout" method="POST"><button type="submit">Выйти</button></form>
 </body>
 </html>
