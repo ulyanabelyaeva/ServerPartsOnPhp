@@ -1,3 +1,6 @@
+<?php
+include __DIR__ . "/scripts/create_script.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +14,12 @@
     <div class="wrapper">
         <form method="post">
             <label>Name</label>
-            <input type="text" id="name" name="name"/>
+            <input type="text" name="name"/>
             <label>Phone</label>
-            <input type="tel" id="phone" name="phone"/>
+            <input type="tel" name="phone"/>
             <label>Password</label>
-            <input type="password" id="password" name="password"/>
-            <div><button><a href="http://localhost:8082/user/regProccess.php">Зарегестрироваться</a></button></div>
+            <input type="password" name="password"/>
+            <button name="submit" type="submit">Зарегестрироваться</button>
           </form>
     </div>    
 </body>

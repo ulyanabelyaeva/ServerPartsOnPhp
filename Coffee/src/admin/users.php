@@ -1,3 +1,6 @@
+<?php
+include __DIR__ . "/scripts/delete_script.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,11 @@
             $mysqli = new mysqli("db", "user", "password", "appDB");
             $result = $mysqli->query("SELECT * FROM users");
             foreach ($result as $row){
-                echo "<li>{$row['username']} {$row['phone']}</li>";
+                echo "<li>{$row['username']} {$row['phone']} 
+                <div class='btns'>
+                <button><a href='user_put.php?edit={$row['ID']}'>Обновить</a></button>
+                <form method='post' action='?id={$row['ID']}'><button type='submit' name='delete'>Удалить</button></form>
+                <div></li>";
             }
         ?>
         </ul>
