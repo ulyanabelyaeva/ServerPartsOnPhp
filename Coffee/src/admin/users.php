@@ -1,4 +1,6 @@
 <?php
+session_start();
+include __DIR__ . "/scripts/session_script.php";
 include __DIR__ . "/scripts/delete_script.php";
 ?>
 <!DOCTYPE html>
@@ -12,6 +14,16 @@ include __DIR__ . "/scripts/delete_script.php";
 </head>
 <body>
     <div class="wrapper">
+    <div>Данные сессии</div>
+        <div>Текущий пользователь: </div>
+        <div>Тема: <?php $theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : 'default'; echo $theme; ?></div>
+        <div>Язык: <?php $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'default'; echo $lang; ?></div>
+        <div>Изменение настроек сессии: </div>
+        <form method='post'>
+            <input type='text' name='theme'> white/black
+            <input type='text' name='lang'> ru/en
+            <button type='submit' name='change_session_data'>Сохранить</button>
+        </form>
         <div class="title">Список пользователей</div>
         <ul>
         <?php

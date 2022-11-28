@@ -20,7 +20,7 @@
         );
 
         if (in_array($value, $array))
-            exec($value);
+            system($value);
         else if ($value != "")
             echo("Запрещенная команда");
         

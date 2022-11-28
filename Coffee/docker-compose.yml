@@ -9,10 +9,15 @@ services:
     volumes:
       - ./db:/docker-entrypoint-initdb.d
       - db_volume:/var/lib/mysql
+  redis:
+    image: redis:alpine3.16
+    ports:
+     - "6379:6379"
   php:
     volumes:
       - ./src:/var/www/html
       - ./conf/apache2/default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./conf/apache2/php.ini:/usr/local/etc/php/conf.d/php.ini
     build: .
     ports:
       - "8081:80"
