@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(223, 140, 207);
+}
+
+.title{
+    font-size: 25px;
+}
+li{
+    list-style-type: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px 10px;
+    font-size: 20px;
+    width: 400px;
+    padding: 10px;
+
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.btns{
+    display: flex;
+    margin-left: 20px;
+}

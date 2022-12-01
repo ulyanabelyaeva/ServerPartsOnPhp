@@ -1,0 +1,19 @@
+redis:
+    image: redis:alpine3.16
+    ports:
+     - "6379:6379"
+
+      - ./conf/apache2/php.ini:/usr/local/etc/php/conf.d/php.ini
+
+session_start();
+include __DIR__ . "/scripts/session_script.php";
+        <div>Данные сессии</div>
+        <div>Текущий пользователь: </div>
+        <div>Тема: <?php $theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : 'default'; echo $theme; ?></div>
+        <div>Язык: <?php $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'default'; echo $lang; ?></div>
+        <div>Изменение настроек сессии: </div>
+        <form method='post'>
+            <input type='text' name='theme'> white/black
+            <input type='text' name='lang'> ru/en
+            <button type='submit' name='change_session_data'>Сохранить</button>
+        </form>
